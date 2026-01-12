@@ -1,0 +1,221 @@
+/* Estilos base */
+        body {
+            background-color: #e6f7ff; /* Color de fondo claro */
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden; /* Previene scroll horizontal */
+        }
+
+        /* Estilos del Header */
+        .header {
+            background: linear-gradient(135deg, #00182c, #4c20c4);
+            color: #fff;
+            padding: 20px 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Estilos del Logo */
+        .logo {
+            width: 80px;
+            height: 80px; 
+            border-radius: 20%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Estilos del Layout Principal */
+        .layout-grid {
+            display: flex; /* Cambiamos grid por flex para apilar sidebar y contenido verticalmente */
+            flex-direction: column; 
+            background-image: url(../img/textura-de-patron-de-pared-de-ladrillo-rojo.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            padding-bottom: 70px;
+        }
+
+        /* 2. Ajuste del Sidebar para que ocupe todo el ancho */
+        .sidebar {
+            width: 100%;
+            height: auto;
+            background-color: #65f548;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-x: auto; /* Permite scroll si hay demasiados items */
+        }
+
+        /* 3. Hacer que la lista sea horizontal */
+        .sidebar ul {
+            display: flex;
+            flex-direction: row; /* Alineación horizontal */
+            justify-content: center; /* Centra los botones */
+            flex-wrap: wrap; /* Si son muchos, bajan a la siguiente línea */
+            gap: 10px; /* Espacio entre botones */
+            list-style-type: none;
+            padding: 0 15px;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 0;
+        }
+
+        .sidebar ul li a {
+            white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+            margin-bottom: 0; /* Quitamos el margen inferior de la versión vertical */
+            color: #1e40af; /* Azul oscuro */
+            background-color: #aaffbf; /* Fondo suave */
+            padding: 10px 15px;
+            display: block;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #0e316b; /* Azul al pasar el mouse */
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Estilos para el menú en móvil (barra horizontal) */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+            }
+            .sidebar ul {
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto; 
+                white-space: nowrap;
+                padding: 0 10px;
+            }
+            .sidebar ul li {
+                flex-shrink: 0;
+                margin: 0 5px;
+            }
+            .sidebar ul li a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+
+        /* Estilos del Portafolio (Contenido Principal) */
+        .portafolio {
+            display: grid;
+            gap: 30px;
+            padding: 30px;
+            /* Se redefine el grid para que en móvil sea una sola columna */
+            grid-template-columns: 1fr; 
+        }
+        
+        @media (min-width: 1025px) {
+            .portafolio {
+                /* Cambiamos a 1 sola columna para que ambos midan lo mismo de ancho */
+                grid-template-columns: 1fr; 
+                max-width: 1200px; /* Opcional: para que no se estire infinito en pantallas gigantes */
+                margin: 0 auto;    /* Centra el contenido */
+            }
+            /* El primer item toma 2 columnas en desktop */
+            .item:nth-child(1) {
+                grid-column: auto; 
+            }
+        }
+        
+        .item {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%; /* Asegura que ocupen todo el espacio disponible */
+            box-sizing: border-box;
+        }
+
+        /* Estilos para el contenedor de fotos */
+        .fotos {
+            display: flex;       /* Alinea las imágenes en fila */
+            gap: 15px;           /* Espacio entre las imágenes */
+            justify-content: center; /* Centra las imágenes */
+            padding: 10px 0;
+            flex-wrap: nowrap;   /* Mantiene las imágenes en la misma línea */
+        }
+
+        .fotos img {
+            width: 48%;          /* Cada imagen ocupa casi la mitad del contenedor */
+            max-width: 400px;    /* Evita que crezcan demasiado en pantallas grandes */
+            height: auto;        /* Mantiene la proporción original */
+            border-radius: 8px;  /* Bordes redondeados para estética */
+            object-fit: cover;   /* Asegura que la imagen llene el espacio asignado */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Esto añade espacio automáticamente a partir del segundo título de color */
+        .fotos-portafolio h3:not(:first-child) {
+            margin-top: 3rem; /* Equivalente a mt-12 */
+            border-top: 1px solid rgba(0,0,0,0.1); /* Una línea divisoria muy tenue */
+            padding-top: 2rem;
+        }
+
+        /* Ajuste específico para celulares pequeños */
+        @media (max-width: 480px) {
+            .fotos {
+                gap: 8px;        /* Reduce el espacio en pantallas pequeñas */
+            }
+            
+            .fotos img {
+                width: 50%;      /* Ajuste exacto para pantallas muy pequeñas */
+            }
+        }
+        /* Clase para resaltar la talla elegida */
+        .talla-seleccionada {
+            border-color: #ffcc00 !important; /* Color Yellow de tu paleta */
+            background-color: #fff9e6;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            /* background-color: #00182c; Azul oscuro */
+            background: linear-gradient(135deg, #00182c, #4c20c4);
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            width: 100%;
+            /* Fijo al fondo */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .correo {
+            text-decoration: none;
+            color: #37f350; /* Verde vibrante */
+            transition: color 0.3s;
+        }
+
+        .correo:hover {
+            color: #fff;
+        }

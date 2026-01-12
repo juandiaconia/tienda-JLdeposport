@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/cortavientos.css">
+    <title>Cortavientos Adidas - JL Deposport</title>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        'primary-blue': '#006bb3',
+                        'secondary-purple': '#4c20c4',
+                        'accent-green': '#37f350',
+                        'marron': '#443c35',
+                        'yellow': '#f2ff00',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <img src="img/Logo JL Deposport.png" onerror="this.onerror=null;this.src='https://placehold.co/80x80/006bb3/ffffff?text=JL';" class="logo" alt="logo">
+        <h1 class="text-2xl md:text-3xl font-bold text-center">Soluciones en Ropa Deportiva</h1>
+    </header>
+
+    <div class="layout-grid">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home pr-2"></i>Inicio</a></li>
+                <li><a href="Cortavientos-Adidas.html"><i class="fas fa-wind pr-2"></i>Cortavientos - Adidas</a></li>
+                <li><a href="Cortavientos-Nike.html"><i class="fas fa-wind pr-2"></i>Cortavientos - Nike</a></li>
+                <li><a href="Cortavientos-Under.html"><i class="fas fa-shield-alt pr-2"></i>Cortavientos - Under Armor</a></li>
+                <li><a href="Supernylon-Forro.html"><i class="fas fa-map pr-2"></i>Supernylon Forro</a></li>
+                <li><a href="Reflectiva-Completa.html"><i class="fas fa-lightbulb pr-2"></i>Reflectiva Completa</a></li>
+                <li><a href="Buzo-Piscinero.html"><i class="fas fa-swimmer pr-2"></i>Buzo Piscinero - Under Armor</a></li>
+                <li><a href="Reflectiva-Fox.html"><i class="fas fa-motorcycle pr-2"></i>Reflectiva - Fox Colmena</a></li>
+                <li><a href="Carrito.html" class="bg-yellow-400 text-black font-bold italic"><i class="fas fa-cart-arrow-down pr-2"></i>Carrito de Compras
+                </a></li>
+            </ul>
+        </nav>
+<body>
+    <main class="portafolio p-6">
+        <section class="item w-full">
+            <h2 class="text-3xl font-bold text-primary-blue mb-6 border-b-2 pb-2">Tu Carrito de Compras</h2>
+            
+            <div id="contenedorCarrito" class="space-y-4">
+                </div>
+
+            <div class="mt-10 p-6 bg-gray-100 rounded-lg text-right">
+                <p class="text-xl">Total a pagar:</p>
+                <p id="totalCompra" class="text-4xl font-bold text-green-600">$0 COP</p>
+                
+                <button onclick="finalizarCompraWhatsApp()" class="mt-6 bg-green-500 text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-green-600 transition flex items-center justify-center gap-3 ml-auto">
+                    <i class="fab fa-whatsapp text-2xl"></i> Finalizar Compra
+                </button>
+                
+                <button onclick="vaciarCarrito()" class="text-red-500 mt-4 text-sm underline">Vaciar Carrito</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function cargarCarrito() {
+            const contenedor = document.getElementById('contenedorCarrito');
+            const totalTxt = document.getElementById('totalCompra');
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let total = 0;
+
+            if (carrito.length === 0) {
+                contenedor.innerHTML = "<p class='text-center py-10 text-gray-500'>El carrito está vacío.</p>";
+                return;
+            }
+
+            contenedor.innerHTML = "";
+            carrito.forEach((prod, index) => {
+                const subtotal = prod.precio * prod.cantidad;
+                total += subtotal;
+                
+                contenedor.innerHTML += `
+                    <div class="flex items-center justify-between border-b py-4 bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <img src="${prod.imagen}" class="w-20 h-20 object-cover rounded">
+                            <div>
+                                <h3 class="font-bold text-lg">${prod.nombre}</h3>
+                                <p class="text-sm text-gray-600">Talla: ${prod.talla} | Cantidad: ${prod.cantidad}</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-bold text-blue-600">$${subtotal.toLocaleString()} COP</p>
+                            <button onclick="eliminarDelCarrito(${index})" class="text-red-400 text-xs hover:text-red-600">Eliminar</button>
+                        </div>
+                    </div>
+                `;
+            });
+            totalTxt.innerText = `$${total.toLocaleString()} COP`;
+        }
+
+        function eliminarDelCarrito(index) {
+            let carrito = JSON.parse(localStorage.getItem('carrito'));
+            carrito.splice(index, 1);
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            cargarCarrito();
+        }
+
+        function vaciarCarrito() {
+            localStorage.removeItem('carrito');
+            cargarCarrito();
+        }
+
+        function finalizarCompraWhatsApp() {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            if (carrito.length === 0) return alert("El carrito está vacío");
+
+            let mensaje = "¡Hola JL Deposport! 👋 Quiero realizar el siguiente pedido:\n\n";
+            let total = 0;
+
+            carrito.forEach(p => {
+                mensaje += `✅ *${p.nombre}*\n`;
+                mensaje += `   Talla: ${p.talla} | Cant.: ${p.cantidad}\n`;
+                mensaje += `   Subtotal: $${(p.precio * p.cantidad).toLocaleString()} COP\n\n`;
+                total += (p.precio * p.cantidad);
+            });
+
+            mensaje += `💰 *TOTAL A PAGAR: $${total.toLocaleString()} COP*`;
+            
+            // Reemplaza con tu número real (ej. 573001234567)
+            const telefono = "573233596787"; 
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            
+            window.open(url, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarCarrito);
+    </script>
+</body>
+</html>

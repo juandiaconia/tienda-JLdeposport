@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Carga de Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portafolio JL Deposport</title>
+    
+    <!-- Configuración de Tailwind para usar la fuente Montserrat -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-blue': '#006bb3',
+                        'secondary-purple': '#4c20c4',
+                        'accent-green': '#37f350',
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <header class="header">
+        <!-- Uso de placeholder de imagen para el logo -->
+        <img 
+            src="img/Logo JL Deposport.png" 
+            onerror="this.onerror=null;this.src='https://placehold.co/80x80/006bb3/ffffff?text=JL';" 
+            class="logo" 
+            alt="logo JL Deposport">
+        <h1 class="text-3xl font-bold">Soluciones en Ropa Deportiva para toda la familia</h1>
+    </header>
+
+    <div class="layout-grid">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home pr-2"></i>Inicio</a></li>
+                <li><a href="Cortavientos-Adidas.html"><i class="fas fa-wind pr-2"></i>Cortavientos - Adidas</a></li>
+                <li><a href="Cortavientos-Nike.html"><i class="fas fa-wind pr-2"></i>Cortavientos - Nike</a></li>
+                <li><a href="Cortavientos-Under.html"><i class="fas fa-shield-alt pr-2"></i>Cortavientos - Under Armor</a></li>
+                <li><a href="Supernylon-Forro.html"><i class="fas fa-map pr-2"></i>Supernylon Forro</a></li>
+                <li><a href="Reflectiva-Completa.html"><i class="fas fa-lightbulb pr-2"></i>Reflectiva Completa</a></li>
+                <li><a href="Buzo-Piscinero.html"><i class="fas fa-swimmer pr-2"></i>Buzo Piscinero - Under Armor</a></li>
+                <li><a href="Reflectiva-Fox.html"><i class="fas fa-motorcycle pr-2"></i>Reflectiva - Fox Colmena</a></li>
+                <li><a href="Carrito.html"><i class="fas fa-cart-arrow-down pr-2"></i>Carrito de Compras</a></li>
+            </ul>
+        </nav>
+
+        <main class="portafolio">
+            <section class="item">
+                <h2 class="text-2xl font-semibold mb-4 text-primary-blue">Somos Fabricantes y Distribuidores</h2>
+                <div class="carousel" id="carousel1">
+                    <div class="carousel-images">
+                        <!-- Usando placeholders para la demostración -->
+                        <img src="img/jlbanner1.png" alt="Imagen 1">
+                        <img src="img/jlbanner2.png" alt="Imagen 2">
+                        <img src="img/jlbanner3.png" alt="Imagen 3">
+                        <img src="img/jlbanner4.png" alt="Imagen 4">
+                        <img src="img/jlbanner5.png" alt="Imagen 5">
+                    </div>
+                    <button class="prev" aria-label="Anterior">❮</button>
+                    <button class="next" aria-label="Siguiente">❯</button>
+                </div>
+            </section>
+            
+            <section class="item">
+                <h2 class="text-2xl font-semibold mb-4 text-primary-blue">Diseños Personalizados</h2>
+                <p class="text-gray-600 mb-4">Descripción del texto que va en esta parte explicando a detalle en que consiste esta sección.</p>
+                <div class="carousel" id="carousel2">
+                    <div class="carousel-images">
+                        <img src="img/dp1.png" alt="Imagen 1">
+                        <img src="img/dp2.png" alt="Imagen 2">
+                        <!-- <img src="https://placehold.co/800x450/ec4899/ffffff?text=Personalizado+C" alt="Imagen 3">
+                        <img src="https://placehold.co/800x450/22c55e/ffffff?text=Personalizado+D" alt="Imagen 4">
+                        <img src="https://placehold.co/800x450/ef4444/ffffff?text=Personalizado+E" alt="Imagen 5"> -->
+                    </div>
+                    <button class="prev" aria-label="Anterior">❮</button>
+                    <button class="next" aria-label="Siguiente">❯</button>
+                </div>
+            </section>
+            
+            <section class="item">
+                <h2 class="text-2xl font-semibold mb-4 text-primary-blue">Soluciones Empresariales</h2>
+                <p class="text-gray-600 mb-4">Descripción del texto que va en esta parte explicando a detalle en que consiste esta sección.</p>
+                <div class="carousel" id="carousel3">
+                    <div class="carousel-images">
+                        <img src="img/se1.png" alt="Imagen 1">
+                        <img src="img/se2.png" alt="Imagen 2">
+                        <img src="img/se3.png" alt="Imagen 3">
+                        <!-- <img src="https://placehold.co/800x450/e879f9/ffffff?text=Empresarial+IV" alt="Imagen 4">
+                        <img src="https://placehold.co/800x450/64748b/ffffff?text=Empresarial+V" alt="Imagen 5"> -->
+                    </div>
+                    <button class="prev" aria-label="Anterior">❮</button>
+                    <button class="next" aria-label="Siguiente">❯</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <p>Más información a: <a href="mailto:jldeposport@gmail.com" class="correo"><b>jldeposport@gmail.com</b></a> <br> Medellín, Colombia - 2025</p>
+    </footer> 
+    
+    <script src="js/carrusel.js"></script> 
+</body>
+</html>

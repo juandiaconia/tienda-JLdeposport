@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/cortavientos.css">
+    <title>Cortavientos Nike - JL Deposport</title>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        'primary-blue': '#006bb3',
+                        'secondary-purple': '#4c20c4',
+                        'accent-green': '#37f350',
+                        'marron': '#443c35',
+                        'yellow': '#f2ff00',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <img src="img/Logo JL Deposport.png" onerror="this.onerror=null;this.src='https://placehold.co/80x80/006bb3/ffffff?text=JL';" class="logo" alt="logo">
+        <h1 class="text-2xl md:text-3xl font-bold text-center">Soluciones en Ropa Deportiva</h1>
+    </header>
+
+    <div class="layout-grid">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home pr-2"></i>Inicio</a></li>
+                <li><a href="Cortavientos-Adidas.html"><i class="fas fa-wind pr-2"></i>Cortavientos - Adidas</a></li>
+                <li><a href="Cortavientos-Nike.html"><i class="fas fa-wind pr-2"></i>Cortavientos - Nike</a></li>
+                <li><a href="Cortavientos-Under.html"><i class="fas fa-shield-alt pr-2"></i>Cortavientos - Under Armor</a></li>
+                <li><a href="Supernylon-Forro.html"><i class="fas fa-map pr-2"></i>Supernylon Forro</a></li>
+                <li><a href="Reflectiva-Completa.html"><i class="fas fa-lightbulb pr-2"></i>Reflectiva Completa</a></li>
+                <li><a href="Buzo-Piscinero.html"><i class="fas fa-swimmer pr-2"></i>Buzo Piscinero - Under Armor</a></li>
+                <li><a href="Reflectiva-Fox.html"><i class="fas fa-motorcycle pr-2"></i>Reflectiva - Fox Colmena</a></li>
+                <li><a href="Carrito.html" class="bg-yellow-400 text-black font-bold italic"><i class="fas fa-cart-arrow-down pr-2"></i>Carrito de Compras
+                </a></li>
+            </ul>
+        </nav>
+
+        <main class="portafolio">
+            <section class="item">
+                <h2 class="text-2xl font-bold mb-6 text-primary-blue border-b-2 border-primary-blue pb-2">Cortavientos Nike - Mujer</h2>
+                
+                <div class="fotos-portafolio">
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Verde Botella</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0126-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Botella', 'img/Nike/dama0122-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0125-1.jpg" class="..."
+                            onclick="abrirModal('Verde Botella', 'img/Nike/dama0122-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Verde Menta</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0128-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Menta', 'img/Nike/dama0127-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0129-1.jpg" class="..."
+                            onclick="abrirModal('Verde Menta', 'img/Nike/dama0127-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Rosado</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0132-1.jpg" class="..." 
+                            onclick="abrirModal('Rosado', 'img/Nike/dama0131-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0133-1.jpg" class="..."
+                            onclick="abrirModal('Rosado', 'img/Nike/dama0131-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Salmón</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0137-1.jpg" class="..." 
+                            onclick="abrirModal('Salmón', 'img/Nike/dama0135-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0138-1.jpg" class="..."
+                            onclick="abrirModal('Salmón', 'img/Nike/dama0135-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Negro - Verde Militar</h3>
+                    <div class="fotos">
+                        <img src="img/Adidas/dama0111-1.jpg" class="..." 
+                            onclick="abrirModal('Negro - Verde Militar', 'img/Adidas/dama0110-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Adidas/dama0112-1.jpg" class="..." 
+                            onclick="abrirModal('Negro - Verde Militar', 'img/Adidas/dama0110-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Palo Rosa</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0141-1.jpg" class="..." 
+                            onclick="abrirModal('Palo Rosa', 'img/Nike/dama0140-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0142-1.jpg" class="..."
+                            onclick="abrirModal('Palo Rosa', 'img/Nike/dama0140-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Lila</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0145-1.jpg" class="..." 
+                            onclick="abrirModal('Lila', 'img/Nike/dama0144-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0146-1.jpg" class="..."
+                            onclick="abrirModal('Lila', 'img/Nike/dama0144-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Fucsia Barney</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0149-1.jpg" class="..." 
+                            onclick="abrirModal('Fucsia Barney', 'img/Nike/dama0148-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0150-1.jpg" class="..."
+                            onclick="abrirModal('Fucsia Barney', 'img/Nike/dama0148-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Verde Jade</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0153-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Jade', 'img/Nike/dama0152-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0154-1.jpg" class="..."
+                            onclick="abrirModal('Verde Jade', 'img/Nike/dama0152-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Terracota</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0157-1.jpg" class="..." 
+                            onclick="abrirModal('Terracota', 'img/Nike/dama0156-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0158-1.jpg" class="..."
+                            onclick="abrirModal('Terracota', 'img/Nike/dama0156-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Uva</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0161-1.jpg" class="..." 
+                            onclick="abrirModal('Uva', 'img/Nike/dama0160-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0162-1.jpg" class="..."
+                            onclick="abrirModal('Uva', 'img/Nike/dama0160-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Verde Oliva</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0165-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Oliva', 'img/Nike/dama0164-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0166-1.jpg" class="..."
+                            onclick="abrirModal('Verde Oliva', 'img/Nike/dama0164-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Negro</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0169-1.jpg" class="..." 
+                            onclick="abrirModal('Negro', 'img/Nike/dama0168-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0170-1.jpg" class="..."
+                            onclick="abrirModal('Negro', 'img/Nike/dama0168-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Azul Cielo</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0173-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Cielo', 'img/Nike/dama0172-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0174-1.jpg" class="..."
+                            onclick="abrirModal('Azul Cielo', 'img/Nike/dama0172-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Verde Neón</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0177-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Neón', 'img/Nike/dama0176-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0178-1.jpg" class="..."
+                            onclick="abrirModal('Verde Neón', 'img/Nike/dama0176-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Fucsia</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0181-1.jpg" class="..." 
+                            onclick="abrirModal('Fucsia', 'img/Nike/dama0180-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0182-1.jpg" class="..."
+                            onclick="abrirModal('Fucsia', 'img/Nike/dama0180-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Blanco</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0185-1.jpg" class="..." 
+                            onclick="abrirModal('Blanco', 'img/Nike/dama0184-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0186-1.jpg" class="..."
+                            onclick="abrirModal('Blanco', 'img/Nike/dama0184-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Uva Claro</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Mujer0424-1.jpg" class="..." 
+                            onclick="abrirModal('Uva Claro', 'img/Nike/Mujer0427-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/Mujer0425-1.jpg" class="..."
+                            onclick="abrirModal('Uva Claro', 'img/Nike/Mujer0427-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Gris Ratón</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/dama0189-1.jpg" class="..." 
+                            onclick="abrirModal('Gris Ratón', 'img/Nike/dama0188-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/dama0190-1.jpg" class="..."
+                            onclick="abrirModal('Gris Ratón', 'img/Nike/dama0188-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-marron">Azul Oscuro</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/mujer0320-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Oscuro', 'img/Nike/mujer0319-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                        <img src="img/Nike/mujer0321-1.jpg" class="..."
+                            onclick="abrirModal('Azul Oscuro', 'img/Nike/mujer0319-1.jpg', 3, 
+                            [{nombre:'S', disponible:true}, {nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:false}])">
+                    </div>
+                </div>
+            </section>
+
+            <section class="item">
+                <h2 class="text-2xl font-bold mb-6 text-primary-blue border-b-2 border-primary-blue pb-2">Cortavientos Nike - Hombre</h2>
+                
+                <div class="fotos-portafolio">
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Naranja</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0193-1.jpg" class="..." 
+                            onclick="abrirModal('Naranja', 'img/Nike/Hombre0192-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0194-1.jpg" class="..." 
+                            onclick="abrirModal('Naranja', 'img/Nike/Hombre0192-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Negro</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0197-1.jpg" class="..." 
+                            onclick="abrirModal('Negro', 'img/Nike/Hombre0196-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0198-1.jpg" class="..." 
+                            onclick="abrirModal('Negro', 'img/Nike/Hombre0196-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Rojo</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0201-1.jpg" class="..." 
+                            onclick="abrirModal('Rojo', 'img/Nike/Hombre0200-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0203-1.jpg" class="..." 
+                            onclick="abrirModal('Rojo', 'img/Nike/Hombre0200-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Gris Ratón</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0205-1.jpg" class="..." 
+                            onclick="abrirModal('Gris Ratón', 'img/Nike/Hombre0204-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0206-1.jpg" class="..." 
+                            onclick="abrirModal('Gris Ratón', 'img/Nike/Hombre0204-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Azul Rey</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0209-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Rey', 'img/Nike/Hombre0208-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0210-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Rey', 'img/Nike/Hombre0208-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Vinotinto</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0213-1.jpg" class="..." 
+                            onclick="abrirModal('Vinotinto', 'img/Nike/Hombre0212-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0214-1.jpg" class="..." 
+                            onclick="abrirModal('Vinotinto', 'img/Nike/Hombre0212-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Vinotinto</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0213-1.jpg" class="..." 
+                            onclick="abrirModal('Vinotinto', 'img/Nike/Hombre0212-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0214-1.jpg" class="..." 
+                            onclick="abrirModal('Vinotinto', 'img/Nike/Hombre0212-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Vinotinto</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0213-1.jpg" class="..." 
+                            onclick="abrirModal('Vinotinto', 'img/Nike/Hombre0212-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0214-1.jpg" class="..." 
+                            onclick="abrirModal('Vinotinto', 'img/Nike/Hombre0212-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Blanco</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0217-1.jpg" class="..." 
+                            onclick="abrirModal('Blanco', 'img/Nike/Hombre0216-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0218-1.jpg" class="..." 
+                            onclick="abrirModal('Blanco', 'img/Nike/Hombre0216-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Verde Botella</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0221-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Botella', 'img/Nike/Hombre0220-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0222-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Botella', 'img/Nike/Hombre0220-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Verde Militar</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0225-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Militar', 'img/Nike/Hombre0224-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0226-1.jpg" class="..." 
+                            onclick="abrirModal('Verde Militar', 'img/Nike/Hombre0224-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Verde Neón</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0230-1.jpg" class="..." 
+                            onclick="abrirModal('Vinotinto', 'img/Nike/Hombre0229-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0231-1.jpg" class="..." 
+                            onclick="abrirModal('Vinotinto', 'img/Nike/Hombre0229-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Gris Plata</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0234-1.jpg" class="..." 
+                            onclick="abrirModal('Gris Plata', 'img/Nike/Hombre0233-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0235-1.jpg" class="..." 
+                            onclick="abrirModal('Gris Plata', 'img/Nike/Hombre0233-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Azul Petróleo</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0238-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Petróleo', 'img/Nike/Hombre0237-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0239-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Petróleo', 'img/Nike/Hombre0237-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Azul Oscuro</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0242-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Oscuro', 'img/Nike/Hombre0241-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0243-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Oscuro', 'img/Nike/Hombre0241-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-marron">Azul Jade</h3>
+                    <div class="fotos">
+                        <img src="img/Nike/Hombre0246-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Jade', 'img/Nike/Hombre0245-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                        <img src="img/Nike/Hombre0247-1.jpg" class="..." 
+                            onclick="abrirModal('Azul Jade', 'img/Nike/Hombre0245-1.jpg', 3, 
+                            [{nombre:'M', disponible:true}, {nombre:'L', disponible:true}, {nombre:'XL', disponible:true}, {nombre:'XXL', disponible:true}, {nombre:'XXXL', disponible:false}, {nombre:'XXXXL', disponible:false}])">
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <div id="miModal" class="fixed inset-0 bg-black/70 z-[100] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[95vh] overflow-y-auto relative flex flex-col md:flex-row shadow-2xl">
+            
+            <button onclick="cerrarModal()" class="absolute top-2 right-4 text-gray-500 hover:text-black text-4xl font-light z-50">&times;</button>
+
+            <div class="md:w-1/2 w-full bg-gray-100 flex items-center justify-center p-2">
+                <img id="modalImagen" src="" alt="Producto" class="max-h-[300px] md:max-h-[500px] w-auto object-contain rounded-lg">
+            </div>
+
+            <div class="md:w-1/2 w-full p-6 md:p-10 flex flex-col justify-center">
+                <h3 id="modalTitulo" class="text-2xl font-bold text-primary-blue mb-2">Nombre del Producto</h3>
+                <p class="text-gray-600 font-medium mb-1">Stock disponible: <span id="maxStock" class="text-marron font-bold">0</span> Unidades</p>
+                <p class="text-3xl font-bold text-gray-900 mb-6">$45.000 <span class="text-sm font-normal">COP</span></p>
+
+                <div class="mb-6">
+                    <h4 class="text-sm uppercase tracking-widest font-bold text-secondary-purple mb-3">Talla:</h4>
+                    <div class="flex gap-2 flex-wrap"></div>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-sm uppercase tracking-widest font-bold text-marron mb-3">Cantidad:</h4>
+                    <select id="selectorCantidad" class="w-full border-2 border-gray-200 rounded-md p-2 outline-none focus:border-primary-blue"></select>
+                </div>
+
+                <button onclick="agregarAlCarrito()" class="w-full bg-primary-blue text-white font-bold py-4 rounded-xl hover:bg-black transition-colors shadow-lg">
+                    <i class="fas fa-shopping-basket mr-2"></i> AGREGAR AL CARRITO
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>JL Deposport - Medellín, Colombia - 2025</p>
+    </footer>
+
+    <script src="js/tallas.js"></script>
+</body>
+</html>

@@ -40,7 +40,7 @@
         .layout-grid {
             display: grid;
             grid-template-columns: 280px 1fr; /* Sidebar y Contenido */
-            background-image: url(../img/textura-de-patron-de-pared-de-ladrillo-rojo.jpg);
+            background-image: url(../img/textura-de-patron-de-pared-de-ladrillo-rojo.webp);
             background-size: cover;
             background-attachment: fixed;
             /* background: linear-gradient(90deg, #dadada, #001f58); */

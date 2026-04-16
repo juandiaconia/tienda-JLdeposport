@@ -40,9 +40,10 @@
         .layout-grid {
             display: flex; /* Cambiamos grid por flex para apilar sidebar y contenido verticalmente */
             flex-direction: column; 
-            background-image: url(../img/textura-de-patron-de-pared-de-ladrillo-rojo.jpg);
+            background: linear-gradient(180deg, #e6f7ff 0%, #cfe8ff 100%);
             background-size: cover;
-            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             padding-bottom: 70px;
         }

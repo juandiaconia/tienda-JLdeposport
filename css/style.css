@@ -1,6 +1,9 @@
 /* Estilos base */
         body {
-            background-color: #e6f7ff; /* Color de fondo claro */
+            background-image: url('../img/textura_pared.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: #333;
             line-height: 1.6;
             min-height: 100vh;

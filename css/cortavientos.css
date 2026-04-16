@@ -43,10 +43,10 @@
         .layout-grid {
             display: flex; /* Cambiamos grid por flex para apilar sidebar y contenido verticalmente */
             flex-direction: column; 
-            background: linear-gradient(180deg, #e6f7ff 0%, #cfe8ff 100%);
+            background-image: url('../img/textura_pared.webp');
             background-size: cover;
             background-repeat: no-repeat;
-            background-attachment: scroll;
+            background-attachment: fixed;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             padding-bottom: 70px;
         }

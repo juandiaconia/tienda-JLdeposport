@@ -1,12 +1,19 @@
 let tallaElegida = "";
+let modalPrecio = 45000;
 const modal = document.getElementById('miModal');
 
+function formatPrice(valor) {
+    return '$' + valor.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+
 // Función para abrir el modal inyectando los datos del producto clicado
-function abrirModal(titulo, imagenDetalle, stock, listaTallas) {
+function abrirModal(titulo, imagenDetalle, stock, listaTallas, precio = 45000) {
     // 1. Inyectar datos básicos
     document.getElementById('modalTitulo').innerText = titulo;
     document.getElementById('modalImagen').src = imagenDetalle;
     document.getElementById('maxStock').innerText = stock;
+    modalPrecio = precio;
+    document.getElementById('modalPrecio').innerText = formatPrice(precio);
     
     // 2. Generar botones de Tallas dinámicamente
     const contenedorTallas = document.querySelector('#miModal .flex.gap-2');
@@ -72,7 +79,7 @@ function agregarAlCarrito() {
     const cantidad = document.getElementById('selectorCantidad').value;
     const titulo = document.getElementById('modalTitulo').innerText;
     const imagen = document.getElementById('modalImagen').src;
-    const precio = 45000; 
+    const precio = modalPrecio;
 
     if (tallaElegida === "") {
         alert("⚠️ Por favor, selecciona una talla antes de agregar.");

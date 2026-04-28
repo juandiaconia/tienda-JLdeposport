@@ -113,3 +113,42 @@ onerror="this.onerror=null;this.src='https://placehold.co/80x80/006bb3/ffffff?te
 - Sin dependencias externas más allá de librerías CDN alojadas
 - Los datos del producto están inline en HTML (no se obtienen de API)
 - La disponibilidad de tallas se controla via booleano `disponible` en los datos
+
+---
+
+## Informe de Cambios del Día 16 de Abril de 2026
+
+### Cambios Realizados
+1. **Configuración de Imagen de Fondo en CSS**: Se agregó la imagen `textura_pared.webp` como fondo en los archivos `css/style.css` y `css/cortavientos.css`. Inicialmente se aplicó al selector `body`, pero posteriormente se movió al selector `.layout-grid` para asegurar visibilidad.
+   - Propiedades aplicadas: `background-image: url('../img/textura_pared.webp')`, `background-size: cover`, `background-repeat: no-repeat`, `background-attachment: fixed`.
+2. **Actualización del Selector de Fondo**: Se cambió el fondo del `.layout-grid` de un gradiente lineal (`linear-gradient(180deg, #e6f7ff 0%, #cfe8ff 100%)`) a la imagen de textura para que sea visible en la página.
+
+### Proceso
+- El usuario solicitó colocar la imagen `textura_pared.webp` (ubicada en `img/`) como fondo en todos los archivos CSS.
+- Se identificaron los archivos CSS existentes: `style.css` y `cortavientos.css`.
+- Se realizó la modificación inicial en el selector `body` de ambos archivos.
+- El usuario reportó que los cambios no eran visibles en la página, manteniendo el color anterior.
+- Se analizó el código y se determinó que el selector `.layout-grid` tenía un fondo propio (gradiente) que cubría el del `body`.
+- Se movió la configuración de fondo al `.layout-grid` en ambos archivos, reemplazando el gradiente existente.
+- Se verificó que la ruta de la imagen fuera correcta (`../img/textura_pared.webp` desde la carpeta `css/`).
+
+### Errores Encontrados y Soluciones
+- **Error Inicial**: La imagen de fondo no se mostraba porque el `.layout-grid` tenía un gradiente de fondo que lo cubría. El `body` estaba detrás o no visible en el área principal.
+  - **Solución**: Cambiar el fondo del `.layout-grid` directamente, eliminando el gradiente y aplicando la imagen de textura. Esto asegura que el fondo sea visible en el contenido principal de la página.
+- **Posible Error de Caché**: Si la página no refleja cambios, podría ser caché del navegador.
+  - **Solución**: Recomendar refrescar con Ctrl+F5 o limpiar caché.
+
+### Estado Anterior de la Página
+- **Fondo**: La página tenía un fondo de gradiente lineal suave en tonos azules claros (`#e6f7ff` a `#cfe8ff`) aplicado al contenedor principal `.layout-grid`.
+- **Layout**: Estructura de grid en la página principal (`style.css`) con sidebar y contenido, y flex en páginas de productos (`cortavientos.css`).
+- **Colores**: Tema consistente con azules, púrpuras y verdes según la paleta definida.
+- **Rendimiento**: Sin imágenes de fondo pesadas; colores sólidos y gradientes ligeros.
+
+### Estado Actual de la Página
+- **Fondo**: Ahora utiliza la imagen `textura_pared.webp` como fondo fijo y cubierto en el contenedor principal, proporcionando una textura visual atractiva y optimizada para carga rápida (formato WebP).
+- **Layout**: Mantiene la misma estructura responsiva, pero con el nuevo fondo aplicado al `.layout-grid`.
+- **Colores**: La textura complementa la paleta existente; los elementos superpuestos (header, sidebar, items) conservan sus colores y contrastes.
+- **Rendimiento**: La imagen está optimizada, por lo que no afecta la velocidad de carga. El `background-attachment: fixed` crea un efecto de parallax sutil al hacer scroll.
+- **Compatibilidad**: Funciona en desktop y móvil, manteniendo la responsividad definida en las media queries.
+
+Este informe documenta todos los cambios realizados hoy para mantener un registro claro del desarrollo y facilitar futuras referencias o reversiones si es necesario.

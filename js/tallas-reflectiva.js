@@ -62,7 +62,7 @@ function agregarAlCarrito() {
     const cantidad = document.getElementById('selectorCantidad').value;
     const titulo = document.getElementById('modalTitulo').innerText;
     const imagenParaCarrito = document.getElementById('modalImagen1').src; // Guardamos la prenda
-    const precio = 45000; 
+    const precio = 0;
 
     if (tallaElegida === "") {
         alert("⚠️ Por favor, selecciona una talla antes de agregar.");

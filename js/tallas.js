@@ -1,5 +1,5 @@
 let tallaElegida = "";
-let modalPrecio = 45000;
+let modalPrecio = 0;
 const modal = document.getElementById('miModal');
 
 function formatPrice(valor) {
@@ -7,7 +7,7 @@ function formatPrice(valor) {
 }
 
 // Función para abrir el modal inyectando los datos del producto clicado
-function abrirModal(titulo, imagenDetalle, stock, listaTallas, precio = 45000) {
+function abrirModal(titulo, imagenDetalle, stock, listaTallas, precio = 0) {
     // 1. Inyectar datos básicos
     document.getElementById('modalTitulo').innerText = titulo;
     document.getElementById('modalImagen').src = imagenDetalle;

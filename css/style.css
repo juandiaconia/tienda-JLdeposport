@@ -122,7 +122,7 @@
             padding: 0 10px;
         }
         .sidebar-menu[open] .sidebar {
-            max-height: 600px;
+            max-height: 1000px;
             padding: 10px 10px 15px;
         }
         .sidebar-menu[open] .sidebar ul {
